@@ -1,0 +1,13 @@
+th, td {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+    text-align: left;
+}
+tr{border-bottom: 1px solid #ddd;}
+tr:hover {background-color: #D6EEEE;}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
