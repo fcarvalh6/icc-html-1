@@ -4,10 +4,31 @@ th, td {
     padding-left: 30px;
     padding-right: 40px;
     text-align: left;
+    border: 1px solid black;
 }
 tr{border-bottom: 1px solid #ddd;}
 tr:hover {background-color: #D6EEEE;}
 table {
     border-collapse: collapse;
     width: 100%;
+    border: 1px solid black;
   }
+  IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+P.legenda {
+        margin-left: auto;
+        margin-right: auto;
+        width: 20em;
+    }
+.titulo{
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+}
+.titulos{
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+}
