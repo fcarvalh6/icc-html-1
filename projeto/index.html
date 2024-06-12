@@ -6,113 +6,81 @@
     <title>Tutorial de Git</title>
 </head>
 <body>
+
     <img src="img/logo.png" alt="Logo do git" width="100" height="100">
     <h1>Tutorial de Git</h1>
+
     <p>O <b>Git</b> é a ferramenta de controle de versão mais utilizada do mundo. Neste tutorial breve,
     será demonstrado de maneira simples e prática como começar a usar o Git para auxiliar nos seus trabalhos</p>
+
     <h2>Como instalar o Git</h2>
+
     <h2>Criando seu primeiro repositório</h2>
+
     <h2>O <em>workflow</em> do git</h2>
-    <img src="img/workflow.png">
+
+    <p>Muitas vezes, ao se falar de git, se fala sobre o seu <i>workflow</i>, ou seja, o "fluxo de trabalho"
+    que é utilizado ao fazer um projeto. Ao se acostumar, essas etapas tornam-se naturais. Mesmo assim, é 
+    importante ressaltar no começo as fases do desenvolvimento, como ilustradas na imagem abaixo.</p>
+
+    <img src="img/workflow.png" alt="Logo do git" width="600">
+
+    <p>Todo workflow começa criando um repositório. As duas principais maneiras são com o comando
+    <mark>git init</mark> ou com o <mark>git clone</mark>. A diferença entre os dois é que o git init cria 
+    a estrutura de trabalho localmente, deixando a <i>linkagem</i> com o GitHub ou serviços remotos para outros
+    comandos, enquanto o git clone, como o nome diz, clona um repositório da internet, podendo este ser seu 
+    próprio. É recomendado começar com o git clone, pois ele é muito mais fácil de usar!</p>
+    <p>Com o repositório clonado ou iniciado, pode-se começar a trabalhar. Olhando a imagem, agora estamos no
+    bloco da esquerda, o diretório de trabalho, e fazemos alterações usando nosso editor de texto de preferência.
+    O Git já estará registrando as alterações.</p>
+
+    <p>Agora já estamos com um tanto de alterações feitas e vamos prosseguir para os próximos passos. A próxima
+    etapa é enviar as alterações do diretório de trabalho para o git local. Para fazer isso temos dois comandos
+    essenciais: git add e git commit. Algumas alterações já vão diretamente quando usamos o git commit, algumas
+    alterações, como mudanças no texto de arquivos, tem que ser adicionadas com o git add. O comando git status
+    sempre te dará uma ideia do que deve ser feito, então nunca deixe de usá-lo.</p>
+
+    <img src="img/gitstatus.png" alt="Demonstração do comando git status" height="150">
+    <p><small>O comando acima nos demonstra como um dos arquivos não será rastreado sem usar git add!</small></p>
+    <img src="img/gitadd.png" alt="Demonstração do comando git add" height="150">
+    <p><small>Agora as alterações estarão presentes no próximo commiy</small></p>
+
+    <p>Alguns comandos úteis são o git commit -a, que já "inclui" o git add, e o git commit -m "Mensagem", onde
+    "Mensagem" é uma mensagem descritiva das alterações feitas no commit. Isso nos trás para o próximo tópico:
+    mensagens de commit. Ao usar o git commit, o git abre o editor escolhido na instalação do git (que pode ser alterado
+    nas configurações) para que o usuário escreva sua mensagem de commit. Não se espante se ele abrir o vim ou
+    outro programa arcaico e pesquise como usá-lo! <small>(no vim, use "i" para entrar no modo de inserção de texto e 
+    depois aperte esc e ":wq" para salvar e sair).</small></p>
+
+    <p>Com o commit feito, só um comando nos separa de enviar as alterações para o GitHub, o git push. Na primeira
+    vez que ele é usado, é necessário que você entre na sua conta do GitHub. O git push envia os commits para o 
+    repositório remoto. É como se usássemos add e commit para carregar um canhão e o push acende o pavio!</p>
+
+    <img src="img/cannon.png" alt="Ilustração de canhão" height="200">
+
+    <p>Agora, para puxar alterações do repositório remoto para o diretório de trabalho, basta usar o comando push.
+    Finalizamos dessa maneira a explicação do workflow, e a imagem acima deve fazer muito mais sentido agora! Apenas
+    dois comandos não foram descritos, por não serem tão úteis nesse momento. Vale ressaltar que o workflow descrito
+    está mais voltado ao trabalho individual. As funções de trabalho em equipe são um oceano imenso a ser explorado e
+    nós incentivamos futuras pesquisas no tópico.</p>
+    <ul>
+        <li>descrição do checkout</li>
+        <li>descrição do fetch</li>
+    </ul>
     <h2>Comandos úteis</h2>
     <table>
         <tr>
-            <th>Comando Git</th>
-            <th>Descrição</th>
+            <th>Ano</th>
+            <th>Mês</th>
         </tr>
         <tr>
-            <td>git init</td>
-            <td>Inicializa um novo repositório Git.</td>
+            <td>2024</td>
+            <td>Junho</td>
         </tr>
         <tr>
-            <td>git clone</td>
-            <td>Cria uma cópia de um repositório existente.</td>
+            <td>2024</td>
+            <td>Janeiro</td>
         </tr>
-        <tr>
-            <td>git branch</td>
-            <td>Lista, cria ou exclui branches.</td>
-        </tr>
-        <tr>
-            <td>git checkout</td>
-            <td>Alterna entre branches ou commits.</td>
-        </tr>
-        <tr>
-            <td>git status</td>
-            <td>Exibe o estado do diretório de trabalho e da área de stage.</td>
-        </tr>
-        <tr>
-            <td>git diff</td>
-            <td>Mostra as diferenças entre commits, entre um commit e a árvore de trabalho, etc.</td>
-        </tr>
-        <tr>
-            <td>git add </td>
-            <td>Adiciona o conteúdo de arquivos à área de stage.</td>
-        </tr>
-        <tr>
-            <td>git commit </td>
-            <td>Registra as mudanças no repositório.</td>
-        </tr>
-        <tr>
-            <td>git push</td>
-            <td>Atualiza referências remotas junto com os objetos associados.</td>
-        </tr>
-        <tr>
-            <td>git pull</td>
-            <td>Busca e integra com outro repositório ou branch local.</td>
-        </tr>
-        <tr>
-            <td>git revert</td>
-            <td>Cria um novo commit que desfaz as mudanças feitas por um commit anterior.</td>
-        </tr>
-        <tr>
-            <td>git merge</td>
-            <td>Mesclar suas alterações de um branch ao branch principal.</td>
-        </tr>
-        <tr>
-            <td>git stash</td>
-            <td>Guarda mudanças no diretório de trabalho sujo temporariamente.</td>
-        </tr>
-        <tr>
-            <td>git rm</td>
-            <td>Remove arquivos do diretório de trabalho e da área de stage.</td>
-        </tr>
-        <tr>
-            <td>git config</td>
-            <td>Define ou obtém opções de repositório ou globais.</td>
-        </tr>
-        <tr>
-            <td>git reset</td>
-            <td>Redefine o HEAD atual para o estado especificado.</td>
-        </tr>
-        <tr>
-            <td>git remote</td>
-            <td>Gerencia o conjunto de repositórios rastreados.</td>
-        </tr>
-        <tr>
-            <td>git fetch</td>
-            <td>Faz o download de objetos e referências de outro repositório.</td>
-        </tr>
-        <tr>
-            <td>git show</td>
-            <td>Mostra vários tipos de objetos.</td>
-        </tr>
-        <tr>
-            <td>git help</td>
-            <td>Exibe informações de ajuda sobre o Git.</td>
-        </tr>
-        <tr>
-            <td>git rebase</td>
-            <td>Aplica novamente commits no topo de outro branch.</td>
-        </tr>
-        <tr>
-            <td>git blame</td>
-            <td>Mostra a revisão e o autor que modificaram cada linha de um arquivo pela última vez.</td>
-        </tr>
-        <tr>
-            <td>git tag</td>
-            <td>Cria, lista, exclui ou verifica um objeto de tag assinado com GPG.</td>
-        </tr>
-
     </table>
     <ol>
         <li>Um</li>
