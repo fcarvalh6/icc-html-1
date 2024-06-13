@@ -7,16 +7,67 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-
+    <header>
+        <a href="index.html">Início</a>
+        <a href="audio.html">Áudio</a>
+        <a href="video.html">Vídeo</a>
+    </header>
     <img class="displayed" src="img/logo.png" alt="Logo do git" width="100" height="100" >
 
     <h1 class="titulo">Tutorial de Git</h1>
     <p>O <b>Git</b> é a ferramenta de controle de versão mais utilizada do mundo. Neste tutorial breve,
     será demonstrado de maneira simples e prática como começar a usar o Git para auxiliar nos seus trabalhos.</p>
 
+    <p>Neste tutorial você aprenderá a:</p>
+
+    <ol>
+        <li>Instalar o Git no seu computador e realizar a configuração inicial;</li>
+        <li>Criar o seu primeiro repositório no GitHub;</li>
+        <li>Percorrer os passos do workflow do Git.</li>
+    </ol>
+
+    <p>No final desta página há uma tabela com comandos úteis do git e exemplos!</p>
+
     <h2 class="titulos">Como instalar o Git</h2>
 
+    <p>Para instalar o Git basta entrar <a href="https://www.git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank" rel="noreferrer">neste</a> site e seguir os passos descritos nele. Durante e após a instalação
+    existem algumas configurações importantes. Na hora de escolher o editor de texto para as mensagens de commit
+    (ver mais sobre mensagens de commit na seção de <i>workflow</i>), nós recomendamos que seja escolhido o seu editor
+    de preferência, já que o padrão do git é o vim, que é bastante complicado de usar no começo.</p>
+
+    <p>Com o Git instalado, podemos conferir se tudo está correto usando <mark>git version</mark> no terminal,
+    que retornará o número de versão do Git caso ele esteja instalado e não uma mensagem de erro. Agora podemos
+    fazer duas configurações importantes: <b>definir o seu nome e o seu email.</b></p>
+
+    <p>Para isso vamos usar dois comandos:</p>
+
+    <ul>
+        <li>git config --global user.name "SEU_NOME SEU_SOBRENOME"</li>
+        <li>git config --global user.email "SEU_EMAIL"</li>
+    </ul>
+
+    <p><small>Claro que você irá colocar <i>suas</i> informações dentro das aspas.</small></p>
+
     <h2 class="titulos">Criando seu primeiro repositório</h2>
+
+    <p>Nós usaremos o serviço de repositório remoto mais utilizado, o GitHub. O GitHub permite
+    você manter seu código organizado e salvo na nuvem, além de permitir a colaboração entre muitos desenvolvedores
+    por meio de um sistema robusto.</p>
+
+    <p>Para começar a utilizar o Git em si, nós vamos precisar criar um repositório remoto no GitHub. Para isso, acesse
+    o site do <a href="" target="_blank" rel="noreferrer">GitHub</a> e crie uma conta. Caso já tenha uma, entre nela. 
+    Vamos deixar a configuração da conta de lado e pular direto para a ação, criando seu primeiro repositório. Basta
+    acessar sua conta do GitHub, ir à aba de repositórios e clicar o botão verde escrito "New" ou "Novo". Dê um título
+    pro seu repositório e selecione a opção que irá adicionar um arquivo README.md, isso será útil para o próximo passo.</p>
+
+    <p>O arquivo README.md normalmente é usado para uma descrição completa do projeto. No nosso caso nós vamos apenas usá-lo
+    para mostrar que o próximo passo está funcionando: entre numa pasta vazia ou crie uma para seu primeiro projeto Git pelo 
+    terminal (usando ls e cd), digite <mark>git clone</mark> e a URL do seu repositório e agora você tem uma cópia
+    do seu repositório git no seu computador, completo com seu arquivo README.md</p>
+
+    <p>A última parte deste capítulo pode ter parecido um pouco corrida, porque foi! Com seu primeiro repositório, 
+    existem diversas possibilidades. Nós achamos que o jeito mais fácil de ensinar o Git é na prática, e vamos fazer
+    isso no próximo capítulo.</p>
 
     <h2 class="titulos">O <em>workflow</em> do git</h2>
 
@@ -50,7 +101,7 @@
     "Mensagem" é uma mensagem descritiva das alterações feitas no commit. Isso nos trás para o próximo tópico:
     mensagens de commit. Ao usar o git commit, o git abre o editor escolhido na instalação do git (que pode ser alterado
     nas configurações) para que o usuário escreva sua mensagem de commit. Não se espante se ele abrir o vim ou
-    outro programa arcaico e pesquise como usá-lo! <small>(no vim, use "i" para entrar no modo de inserção de texto e 
+    outro programa "arcaico" e pesquise como usá-lo! <small>(no vim, use "i" para entrar no modo de inserção de texto e 
     depois aperte esc e ":wq" para salvar e sair).</small></p>
 
     <p>Com o commit feito, só um comando nos separa de enviar as alterações para o GitHub, o git push. Na primeira
@@ -59,14 +110,15 @@
 
     <img class="displayed" src="img/cannon.png" alt="Ilustração de canhão" height="200">
 
-    <p>Agora, para puxar alterações do repositório remoto para o diretório de trabalho, basta usar o comando push.
-    Finalizamos dessa maneira a explicação do workflow, e a imagem acima deve fazer muito mais sentido agora! Apenas
+    <p>Agora, para puxar alterações do repositório remoto para o diretório de trabalho, basta usar o comando pull, que trás
+    uma versão atualizada do repositório direto para o seu PC (isso é mais útil ao programar em duas máquinas diferentes ou com mais de uma pessoa).
+    Finalizamos dessa maneira a explicação do workflow, e a imagem do workflow acima deve fazer muito mais sentido agora! Apenas
     dois comandos não foram descritos, por não serem tão úteis nesse momento. Vale ressaltar que o workflow descrito
     está mais voltado ao trabalho individual. As funções de trabalho em equipe são um oceano imenso a ser explorado e
     nós incentivamos futuras pesquisas no tópico.</p>
     <ul>
-        <li>descrição do checkout</li>
-        <li>descrição do fetch</li>
+        <li>O git checkout te permite navegar entre "branches".</li>
+        <li>O git fetch trás o repositório especificado para o git local sem mandá-lo diretamente para o diretório de trabalho</li>
     </ul>
     <h2 class="titulos">Comandos úteis</h2>
 
