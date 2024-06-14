@@ -1,3 +1,8 @@
+body{margin: 0;}
+p{
+    padding-left: 3px;
+    padding-right: 3px;
+}
 th, td {
     padding-top: 10px;
     padding-bottom: 20px;
@@ -9,9 +14,12 @@ th, td {
 tr{border-bottom: 1px solid #ddd;}
 tr:hover {background-color: #D6EEEE;}
 table {
+    
     border-collapse: collapse;
     width: 100%;
     border: 1px solid black;
+    padding-left: 3px;
+    padding-right: 3px;
   }
   IMG.displayed {
     display: block;
@@ -34,4 +42,20 @@ P.legenda {
 }
 p{
     text-indent: 50px;
+}
+
+a{
+    margin-right: 20px;
+    margin-left: 20px;
+    color: #FFF;
+    font-size: 20px;
+}
+
+header{background-color: #3b496f;}
+
+
+.cor{
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
 }
